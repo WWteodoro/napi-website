@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napi Biodiversidade - Inteligência Artificial</title>
+    <style>
+        :root {
+            --primary-color: #1a252f;
+            --secondary-color: #2c3e50;
+            --accent-color: #27ae60; 
+            --text-color: #333333;
+            --bg-color: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section (Cabeçalho principal) */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            font-weight: 300;
+            color: #ecf0f1;
+        }
+
+        /* Secção de Capturas de Ecrã */
+        .screenshots-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .screenshots-section h2 {
+            color: var(--primary-color);
+            font-size: 2.2em;
+            margin-bottom: 50px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .screenshot-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .screenshot-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+        }
+
+        .screenshot-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .screenshot-card h3 {
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+            font-size: 1.3em;
+        }
+
+        .screenshot-card p {
+            margin: 0;
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        /* Secção do Formulário (Call to Action) */
+        .cta-section {
+            text-align: center;
+            padding: 60px 30px;
+            background-color: white;
+            border-radius: 20px;
+            margin: 60px auto 80px auto;
+            max-width: 800px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-top: 5px solid var(--accent-color);
+        }
+
+        .cta-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .cta-section p {
+            margin-bottom: 40px;
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 16px 45px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+        }
+
+        .btn:hover {
+            background-color: #219653;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            background-color: var(--primary-color);
+            color: #ecf0f1;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Aplicativo para identificação animal com inteligência artificial - Napi Biodiversidade</h1>
+            <p>
+                O <strong>Napi Biodiversidade</strong> é uma ferramenta robusta desenvolvida para otimizar a análise de fauna. 
+                Faça o carregamento dos seus vídeos de monitorização e a nossa Inteligência Artificial fará a varredura automática, 
+                identificando e isolando os trechos que contêm animais.
+            </p>
+            <p>
+                Realize anotações detalhadas de espécies, analise o progresso do processamento, gere gráficos precisos 
+                e exporte todos os dados catalogados diretamente para a sua investigação científica.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="screenshots-section">
+            <h2>Conheça a Interface da Aplicação</h2>
+            <div class="gallery">
+                
+                <div class="screenshot-card">
+                    <img src="dash.png" alt="Dashboard e Gestão de Locais">
+                    <div>
+                        <h3>Gestão de Locais</h3>
+                        <p>Controlo total sobre as diferentes áreas de estudo, parques e fazendas. Organize a sua investigação exportando fotografias e gerindo a base de dados de forma intuitiva.</p>
+                    </div>
+                </div>
+                
+                <div class="screenshot-card">
+                    <img src="tela-camera.png" alt="Gestão de Câmaras e Processamento">
+                    <div>
+                        <h3>Monitorização de Progresso</h3>
+                        <p>Acompanhe em tempo real o estado do processamento da Inteligência Artificial e das anotações manuais para cada câmara registada.</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card">
+                    <img src="video-player.jpg" alt="Leitor de Vídeo e Identificação">
+                    <div>
+                        <h3>Anotação e Identificação</h3>
+                        <p>Leitor de vídeo integrado com caixas de delimitação (bounding boxes) da IA. Registe a espécie, quantidade, clima e comentários com precisão milimétrica.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Quer utilizar o Napi Biodiversidade?</h2>
+            <p>A aplicação encontra-se atualmente disponível para investigadores e profissionais da área. Preencha o nosso formulário para solicitar o acesso e receber o link de transferência do instalador oficial.</p>
+            
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAgsLoi3ofWLYAXCq2zIrLqNIHkvE7G8Ps7ADjNRD0bsvzMw/viewform?usp=publish-editor" target="_blank" class="btn">Solicitar Acesso à Aplicação</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Napi Biodiversidade. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
